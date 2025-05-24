@@ -47,5 +47,10 @@ Broke ass.""")
         if found_item:
             inventory.append(found_item)
 
+    elif cmd == "sleep":
+        print("You go to sleep")
+        playing = False
+        print("The end.")
+
 
 

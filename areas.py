@@ -4,9 +4,11 @@ areas = {
 The bed you woke from stands against one wall.
 There's a small grimy window opposite.
 An old paint-chipped door to the east looks like your only exit.""",
+
          "exits": {"east": "larger room"},
+
          "searches": {
-             "bed": {"You have found a key!": "key"},
+             "bed": {"You have find a key!": "key"},
              "window": {"Just dust and grime.": ""}
          }
 },
@@ -16,10 +18,16 @@ The lighting is even a little warm with
 cream and brown wallpaper giving this room a strange
 homely atmosphere.
 It's even furnished with a comfy 3-piece, bookshelves,
-a display cabinet and a varnished table and chairs.""",
-         "items": ["cricket bat", "scrawled note", "torch"],
-         "exits": {"west": "stone room", "north": "courtyard"}
-         },
+a display cabinet and a varnished table and chairs.
+To the north a door leads outside.""",
+
+         "exits": {"west": "stone room", "north": "courtyard"},
+
+         "searches": {
+             "bookshelf": {"Just some boring, dusty books": ""},
+             "display cabinet": {"You find a knife!": "knife"}
+         }
+},
     "courtyard":
         {"description": """An eerily empty paved courtyard.
 A crumbling fountain slouches at the center.""",
