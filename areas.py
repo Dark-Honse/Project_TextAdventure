@@ -4,7 +4,6 @@ areas = {
 The bed you woke from stands against one wall.
 There's a small grimy window opposite.
 An old paint-chipped door looks like your only exit.""",
-         "items": ["revolver", "key"],
          "exits": {"east": "larger room"},
          "searches": {
              "bed": {"You have found a key!": "key"},
