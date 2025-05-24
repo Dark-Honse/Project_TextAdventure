@@ -3,7 +3,7 @@ areas = {
         {"description": """The room is dark and musty.
 The bed you woke from stands against one wall.
 There's a small grimy window opposite.
-An old paint-chipped door looks like your only exit.""",
+An old paint-chipped door to the east looks like your only exit.""",
          "exits": {"east": "larger room"},
          "searches": {
              "bed": {"You have found a key!": "key"},
