@@ -8,7 +8,7 @@ An old paint-chipped door to the east looks like your only exit.""",
          "exits": {"east": "larger room"},
 
          "searches": {
-             "bed": {"You have find a key!": "key"},
+             "bed": {"You find a key!": "key"},
              "window": {"Just dust and grime.": ""}
          }
 },
@@ -31,8 +31,12 @@ To the north a door leads outside.""",
     "courtyard":
         {"description": """An eerily empty paved courtyard.
 A crumbling fountain slouches at the center.""",
-         "items": ["silver key"],
-         "exits": {"south": "larger room"}}
+
+         "exits": {"south": "larger room"},
+         "searches": {
+             "fountain": {"You find a key": "old key"}
+         }
+         }
 }
 
 
