@@ -46,7 +46,7 @@ Broke ass.""")
         player_location = move(player_location, direction,areas)
 
     elif cmd.startswith("search "):
-        target = cmd.split()[1]
+        target = cmd.split(maxsplit=1)[1]
         found_item = search(player_location, target, areas)
         if found_item:
             inventory.append(found_item)
