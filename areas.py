@@ -9,7 +9,8 @@ An old paint-chipped door to the east looks like your only exit.""",
 
          "searches": {
              "bed": {"You find a key!": "key"},
-             "window": {"Just dust and grime.": ""}
+             "window": {"Just dust and grime.": ""},
+             "safe": {""}
          }
 },
      "larger room":

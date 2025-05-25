@@ -4,6 +4,7 @@ from helpers import search
 from areas import areas
 
 playing = False
+safe_locked = True
 
 player_location = ""
 inventory = []
