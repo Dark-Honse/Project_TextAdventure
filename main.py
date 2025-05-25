@@ -27,6 +27,10 @@ go [north, east, south, west]
 pick up/take [something]
 quit/exit - to leave the game""")
 
+    elif cmd in ["quit", "exit", "quit game"]:
+        playing = False
+        print("Thanks for playing! Goodbye!")
+
     elif cmd in ["look", "look around", "view"]:
         view(player_location, areas)
 
@@ -51,6 +55,7 @@ Broke ass.""")
         print("You go to sleep")
         playing = False
         print("The end.")
-
+    else:
+        print("I don't understand that.")
 
 
