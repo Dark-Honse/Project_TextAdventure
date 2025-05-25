@@ -55,6 +55,16 @@ Broke ass.""")
         print("You go to sleep")
         playing = False
         print("The end.")
+
+    elif cmd in ["read note", "view note", "examine note", "inspect note"]:
+        if "scrawled note" in inventory:
+            print("""It looks hastily written. It reads:
+Do NOT let him out until we get the next shipment.
+He's unstable at the minute. Stay safe.
+-P""")
+        else:
+            print("What note?")
+
     else:
         print("I don't understand that.")
 

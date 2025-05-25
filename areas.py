@@ -24,8 +24,9 @@ To the north a door leads outside.""",
          "exits": {"west": "stone room", "north": "courtyard"},
 
          "searches": {
-             "bookshelf": {"Just some boring, dusty books": ""},
-             "display cabinet": {"You find a knife!": "knife"}
+             "bookshelf": {"Just some boring, dusty books.": ""},
+             "display cabinet": {"You find a knife!": "knife"},
+             "table": {"You find a scrawled note.": "scrawled note"},
          }
 },
     "courtyard":
@@ -33,6 +34,7 @@ To the north a door leads outside.""",
 A crumbling fountain slouches at the center.""",
 
          "exits": {"south": "larger room"},
+
          "searches": {
              "fountain": {"You find a key": "old key"}
          }
