@@ -2,15 +2,27 @@ areas = {
     "stone room":
         {"description": """The room is dark and musty.
 The bed you woke from stands against one wall.
-There's a small grimy window opposite.
+There's a heavy looking floor safe under a small grimy window opposite.
 An old paint-chipped door to the east looks like your only exit.""",
 
          "exits": {"east": "larger room"},
 
          "searches": {
-             "bed": {"You find a key!": "key"},
-             "window": {"Just dust and grime.": ""},
-             "safe": {""}
+             "bed": {
+                 "text_found": "You find a rusted key under the pillow!",
+                 "item": "rusted key",
+                 "searched": False,
+                 "text_searched": "Nothing else. Just a nasty dark stain across the sheet."},
+             "safe": {
+                 "locked": True,
+                 "text_locked": "Doesn't budge, it's locked.",
+                 "required": "rusted key",
+                 "text_unlocked": "you unlock the safe!",
+                 "text_found": "You find a revolver!",
+                 "item": "revolver",
+                 "searched": False,
+                 "text_searched": "There's nothing else in here."
+             }
          }
 },
      "larger room":

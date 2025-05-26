@@ -16,14 +16,26 @@ def move(location, direction, areas):
 
 
 
-def search(location, target, areas):
+def search(location, target, areas, inventory):
     searches = areas[location].get("searches", {})
-    if target in searches:
-        result = list(searches[target].items())[0]
-        message, item = result
-        print(message)
-        return item
-    else:
-        print("You don't find anything.")
+    if target not in searches:
+        print("You don't see that in here.")
         return ""
+    obj = searches[target]
+    if obj.get("searched"):
+        print(obj.get("text_searched"))
+        return ""
+    if obj.get("locked"):
+        key_needed = obj.get("required")
+        if key_needed in inventory:
+            obj["locked"] = False
+            print(obj.get("text_unlocked"))
+        else:
+            print(obj.get("text_locked"))
+            return ""
+    print(obj.get("text_found"))
+    item = obj.get("item", "")
+    obj["searched"] = True
+    return item
+
 

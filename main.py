@@ -1,6 +1,4 @@
-from helpers import view
-from  helpers import move
-from helpers import search
+from helpers import view, move, search
 from areas import areas
 
 playing = False
@@ -48,8 +46,8 @@ Broke ass.""")
 
     elif cmd.startswith("search "):
         target = cmd.split(maxsplit=1)[1]
-        found_item = search(player_location, target, areas)
-        if found_item:
+        found_item = search(player_location, target, areas, inventory)
+        if found_item and found_item not in inventory:
             inventory.append(found_item)
 
     elif cmd == "sleep":
