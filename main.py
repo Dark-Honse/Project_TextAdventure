@@ -5,6 +5,7 @@ safe_code = getsafecode()
 
 playing = False
 safe_locked = True
+gate_locked = True
 
 player_location = ""
 inventory = []
@@ -44,7 +45,18 @@ Broke ass.""")
 
     elif cmd.startswith("go "):
         direction = cmd.split()[1]
-        player_location = move(player_location, direction,areas)
+        if player_location == "courtyard" and direction == "east" and "small coin" not in inventory:
+            print("The gate is locked. There's no keyhole but there is a small slot opening.")
+        else:
+            player_location = move(player_location, direction,areas)
+
+        if player_location == "escape":
+            print("""You push the small coin into the slot.
+After a satisfying high-pitched beep you push open the gate.
+You made it out. For now...""")
+            print("----------")
+            print("Thank you for playing.")
+            playing = False
 
     elif cmd.startswith("search "):
         target = cmd.split(maxsplit=1)[1]

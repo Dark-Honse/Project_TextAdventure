@@ -59,9 +59,12 @@ To the north a door leads outside.""",
 },
     "courtyard":
         {"description": """An eerily empty paved courtyard.
-A crumbling fountain slouches at the center.""",
+A crumbling fountain slouches at the center.
+To the east a solid metal gate looks like it leads out.""",
 
-         "exits": {"south": "larger room"},
+         "exits": {
+             "south": "larger room",
+             "east": "escape"},
 
          "searches": {
              "fountain": {
