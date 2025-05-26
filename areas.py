@@ -64,7 +64,12 @@ A crumbling fountain slouches at the center.""",
          "exits": {"south": "larger room"},
 
          "searches": {
-             "fountain": {"You find a key": "old key"}
+             "fountain": {
+                 "text_found": "You find a small coin.",
+                 "item": "small coin",
+                 "searched": False,
+                 "text_searched": "Nothing else in here."
+             }
          }
          }
 }
