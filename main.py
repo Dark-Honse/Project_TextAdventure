@@ -1,5 +1,7 @@
-from helpers import view, move, search
+from helpers import view, move, search, getsafecode
 from areas import areas
+
+safe_code = getsafecode()
 
 playing = False
 safe_locked = True
@@ -57,12 +59,27 @@ Broke ass.""")
 
     elif cmd in ["read note", "view note", "examine note", "inspect note"]:
         if "scrawled note" in inventory:
-            print("""It looks hastily written. It reads:
+            print(f"""It looks hastily written. It reads:
 Do NOT let him out until we get the next shipment.
 He's unstable at the minute. Stay safe.
+P.S. The safe code is {safe_code}
 -P""")
         else:
             print("What note?")
+
+    elif cmd in ["examine safe", "unlock safe", "use safe code"]:
+        while True:
+            print("Enter code: ")
+            attempt = input("> ")
+            if attempt == safe_code:
+                areas["stone room"]["searches"]["safe"]["locked"] = False
+                print("The lock clicks..")
+                break
+            elif attempt in ["leave", "stop", "exit"]:
+                print("You turn away from the safe.")
+                break
+            else:
+                print("Nothing happens.")
 
     else:
         print("I don't understand that.")

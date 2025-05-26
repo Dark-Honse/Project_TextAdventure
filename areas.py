@@ -1,3 +1,4 @@
+
 areas = {
     "stone room":
         {"description": """The room is dark and musty.
@@ -9,14 +10,14 @@ An old paint-chipped door to the east looks like your only exit.""",
 
          "searches": {
              "bed": {
-                 "text_found": "You find a rusted key under the pillow!",
-                 "item": "rusted key",
+                 "text_found": "You find a brass key under the pillow!",
+                 "item": "brass key",
                  "searched": False,
                  "text_searched": "Nothing else. Just a nasty dark stain across the sheet."},
              "safe": {
                  "locked": True,
                  "text_locked": "Doesn't budge, it's locked.",
-                 "required": "rusted key",
+                 "required": "safe code",
                  "text_unlocked": "you unlock the safe!",
                  "text_found": "You find a revolver!",
                  "item": "revolver",
@@ -37,9 +38,25 @@ To the north a door leads outside.""",
          "exits": {"west": "stone room", "north": "courtyard"},
 
          "searches": {
-             "bookshelf": {"Just some boring, dusty books.": ""},
-             "display cabinet": {"You find a knife!": "knife"},
-             "table": {"You find a scrawled note.": "scrawled note"},
+             "bookshelf": {
+                 "text_found": "Just some boring, dusty books.",
+                 "item": "",
+                 "searched": False,
+                 "text_searched": "Still just dust and uninteresting books."},
+             "display cabinet": {
+                 "locked": True,
+                 "required": "brass key",
+                 "text_locked": "The display lid is locked closed.",
+                 "text_unlocked": "You use the brass key to unlock the cabinet.",
+                 "text_found": "You find a signed baseball bat!",
+                 "item": "signed baseball bat",
+                 "searched": False,
+                 "text_searched": "Nothing else in here."},
+             "table": {
+                 "text_found": "You find a scrawled note.",
+                 "item": "scrawled note",
+                 "searched": False,
+                 "text_searched": "Nothing else of interest."},
          }
 },
     "courtyard":

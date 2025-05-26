@@ -1,4 +1,4 @@
-
+import random
 
 def view(location, areas):
     """print the player's view."""
@@ -38,4 +38,10 @@ def search(location, target, areas, inventory):
     obj["searched"] = True
     return item
 
-
+def getsafecode():
+    numbers = list("0123456789")
+    random.shuffle(numbers)
+    safe_code = ""
+    for i in range(4):
+        safe_code += str(numbers[i])
+    return safe_code
