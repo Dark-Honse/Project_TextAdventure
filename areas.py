@@ -1,4 +1,3 @@
-
 areas = {
     "stone room":
         {"description": """The room is dark and musty.
@@ -17,7 +16,6 @@ An old paint-chipped door to the east looks like your only exit.""",
              "safe": {
                  "locked": True,
                  "text_locked": "Doesn't budge, it's locked.",
-                 "required": "safe code",
                  "text_unlocked": "you unlock the safe!",
                  "text_found": "You find a revolver!",
                  "item": "revolver",
