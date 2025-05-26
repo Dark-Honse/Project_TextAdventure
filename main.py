@@ -84,6 +84,13 @@ P.S. The safe code is {safe_code}
         else:
             print("There's no safe here.")
 
+    elif cmd == "use revolver":
+        print("""The voices become louder.
+You shoot yourself in the head.
+To be continued...
+Thank you for playing.""")
+        playing = False
+
     else:
         print("I don't understand that.")
 
